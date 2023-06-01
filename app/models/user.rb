@@ -1,3 +1,5 @@
 class User < ActiveRecord::Base
-  
-end
+    has_many :reviews
+    has_many :games, through: :reviews
+  end
+
